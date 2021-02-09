@@ -1,0 +1,18 @@
+{% extends "home.html" %} {%block content%}
+<div class="jumbotron">
+  <p>Welcome to Puppy Rock!</p>
+  <p>Wanna sign up for our puppy band?</p>
+  <p>The username should complete the following requirements</p>
+  <ul>
+    <li>Must have an upper case letter somewhere.</li>
+    <li>Must have a lower case letter somewhere.</li>
+    <li>Must have a number at the end.</li>
+  </ul>
+  <form action="{{url_for('report')}}">
+    <label for="UserName">UserName</label>
+    <input type="text" name="UserName" />
+    <input type="submit" value="Submit Form" />
+  </form>
+</div>
+
+{%endblock%}

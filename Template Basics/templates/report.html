@@ -1,0 +1,19 @@
+{% extends 'home.html'%} {%block content%}
+<div class="jumbotron">
+  <p>Lets see how you performed!!</p>
+  {%if result%}
+  <p>Well Done you have passed all the 3 requirements</p>
+  {%else%}
+  <p>Oh no you have the following requirements which are not fulfilled:</p>
+  <ul>
+    {%if lower%}
+    <li>The UserName does not contain a lowercase character</li>
+    {%endif%} {%if upper%}
+    <li>The UserName does not contain a uppercase character</li>
+    {%endif%} {%if number%}
+    <li>The UserName does not end with a number.</li>
+    {%endif%}
+  </ul>
+  {%endif%}
+</div>
+{%endblock%}
